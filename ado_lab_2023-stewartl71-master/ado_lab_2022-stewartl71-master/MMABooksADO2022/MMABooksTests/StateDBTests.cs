@@ -7,6 +7,7 @@ using MMABooksBusinessClasses;
 using MMABooksDBClasses;
 
 using MySql.Data.MySqlClient;
+using NUnit.Framework.Legacy;
 
 namespace MMABooksTests
 {
@@ -23,8 +24,8 @@ namespace MMABooksTests
         public void TestGetStates()
         {
             List<State> states = StateDB.GetStates();
-            Assert.AreEqual(53, states.Count);
-            Assert.AreEqual("Alabama", states[0].StateName);
+            ClassicAssert.AreEqual(53, states.Count);
+            ClassicAssert.AreEqual("Alaska", states[0].StateName);
         }
 
         [Test]
